@@ -12,6 +12,19 @@ import { Kubernetes } from "@/components/ui/svgs/kubernetes";
 import { Java } from "@/components/ui/svgs/java";
 import { Csharp } from "@/components/ui/svgs/csharp";
 
+type Hackathon = {
+  title: string;
+  dates?: string;
+  location?: string;
+  description?: string;
+  image?: string;
+  links?: {
+    title: string;
+    href: string;
+    icon: React.ReactNode;
+  }[];
+};
+
 export const DATA = {
   name: "V Hariram",
   initials: "VH",
@@ -165,5 +178,5 @@ export const DATA = {
     },
   ],
 
-  hackathons: [],
+ hackathons: [] as Hackathon[],
 } as const;
